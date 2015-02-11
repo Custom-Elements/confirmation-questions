@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>ui-confirmation-questions</title>
+    <link rel="import" href="node_modules/polymer/polymer.html">
+    <link rel="import" href="src/ui-confirmation-questions.html">
+    <link rel="import" href="node_modules/ui-fonts/fonts.html">
+    <link rel="import" href="node_modules/ui-styles/ui-styles.html">
+    <style>
+      body {
+        font-family: "Helvetica Neue", "Helvetica", Arial;
+        font-size: 12px;
+      }
+      #holder {
+        padding: 4em;
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <div id="holder">      
+       <ui-confirmation-questions loadUrl="http://localhost:9999/api/clientYaml/6324/consultation/afterCallQuestions" saveUrl="test" succcessHandler="function(){alert('saved');};"></ui-confirmation-questions>
+    </div>
+    <script>
+      document.addEventListener('polymer-ready', function() {
+      })
+    </script>
+  </body>
+</html>

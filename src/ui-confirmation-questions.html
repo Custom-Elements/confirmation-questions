@@ -1,0 +1,43 @@
+<link rel="import" href="../node_modules/polymer/polymer.html">
+<link rel="import" href="../node_modules/core-ajax-npm/core-ajax.html">
+<link rel="import" href="../node_modules/ui-check/src/ui-check.html">
+<link rel="import" href="../node_modules/ui-button/src/ui-button.html">
+
+<polymer-element name="ui-confirmation-questions" attributes="loadUrl questions saveUrl succcessHandler">
+  <template>
+    <link rel="stylesheet" type="text/css" href="./ui-confirmation-questions.less">        
+
+    <core-ajax
+      id="questionCall"
+      url="{{loadUrl}}"
+      handleAs="json"
+      response="{{questions}}">
+    </core-ajax>
+
+    <core-ajax
+      id="saveCall"
+      url="{{saveUrl}}"
+      handleAs="json"
+      on-core-response="{{saveUrlResponse}}">
+    </core-ajax>
+    
+    <template repeat="{{question in questions}}">
+    	<div class="question">
+  			<ui-check value="{{question.checked}}">
+  				<label>{{question.text}}</label>
+  			</ui-check>
+  		</div>
+    </template>
+    
+    <template if="{{requiredAlert}}">
+        <div id="requireAlertText" class="error">* Please check all of the above to continue.</div>
+    </template>
+
+  	<div class="save">
+  		<ui-button red on-click="{{saveQuestions}}">
+  			<label>I Agree</label>
+  		</ui-button>
+  	</div>
+  </template>
+  <script src="./ui-confirmation-questions.litcoffee"></script>
+</polymer-element>

@@ -1,0 +1,18 @@
+{
+  "name": "ui-confirmation-questions",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer-serve": "git://github.com/custom-elements/polymer-serve",
+    "polymer": "git://github.com/custom-elements/polymer#master",
+    "core-ajax-npm": "git://github.com/custom-elements/core-ajax-npm#master",  
+    "ui-check": "git://github.com:Custom-Elements/ui-check", 
+    "ui-button": "git://github.com:Custom-Elements/ui-button",
+    "ui-styles": "git://github.com/custom-elements/ui-styles#master",
+    "ui-fonts": "git://github.com/custom-elements/ui-fonts#master"
+  },
+  "author": "George Toretta <gtoretta@glgroup.com>",
+  "license": "ISC",
+  "scripts": {
+    "test": "polymer-serve ."
+  }
+}
