@@ -14,13 +14,6 @@
       response="{{questions}}">
     </core-ajax>
 
-    <core-ajax
-      id="saveCall"
-      url="{{saveUrl}}"
-      handleAs="json"
-      on-core-response="{{saveUrlResponse}}">
-    </core-ajax>
-    
     <template repeat="{{question in questions}}">
     	<div class="question">
   			<ui-check value="{{question.checked}}">

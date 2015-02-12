@@ -21,20 +21,16 @@ Marker turns the button off temporarily. Please hide buttons instead.
       saveQuestions: ->
         @requiredAlert = false
         if (@questions.every (q) -> q.checked)
-          @$.saveCall.go();
+          @fire 'success'
         else
           @requiredAlert = true
-
-      saveUrlResponse: ->
-        succcessHandler();
-
 
 ##Polymer Lifecycle
 
       created: ->
 
       ready: ->
-        if (!@questions?.length)
+        if (@questions?.length == 0)
           @$.questionCall.go();
 
       attached: ->
