@@ -23,7 +23,8 @@
     </div>
     <script>
       document.addEventListener('polymer-ready', function() {
-        document.querySelector('ui-confirmation-questions').questions = [{'text': 'test question'}]
+        document.querySelector('ui-confirmation-questions').questions = 
+          [{'text': 'Were you a good person'}, { 'text': 'Were you nice on the call'}]
 
         document.addEventListener('success', function(event) {
           console.log('succces');
