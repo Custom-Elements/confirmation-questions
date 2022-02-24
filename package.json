@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "dependencies": {
     "polymer-serve": "^0.0.30",
-    "polymer": "git://github.com/custom-elements/polymer#master",
-    "core-ajax-npm": "git://github.com/custom-elements/core-ajax-npm#master",
-    "ui-check": "git://github.com/Custom-Elements/ui-check",
-    "ui-button": "git://github.com/Custom-Elements/ui-button",
-    "ui-styles": "git://github.com/custom-elements/ui-styles#master",
+    "polymer": "git+https://git+httpshub.com/custom-elements/polymer#master",
+    "core-ajax-npm": "git+https://git+httpshub.com/custom-elements/core-ajax-npm#master",
+    "ui-check": "git+https://git+httpshub.com/Custom-Elements/ui-check",
+    "ui-button": "git+https://git+httpshub.com/Custom-Elements/ui-button",
+    "ui-styles": "git+https://git+httpshub.com/custom-elements/ui-styles#master",
     "ui-fonts": "^0.0.1"
   },
   "author": "George Toretta <gtoretta@glgroup.com>",
